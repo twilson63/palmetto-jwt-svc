@@ -1,6 +1,6 @@
 {
   "name": "@twilson63/palmetto-jwt-svc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The JWT Service is a simple service that maintains a  cache of a secret token and some metadata. Once a user is authenticated, you can create a JWT and add the users identification information in this service. Then other services can request it when they need it. This can enable applets and mobile applications to access your system without having to have session cookies, but still be secure. The token is only good x amount of time since the last get, you can  configure but the default is 2 minutes.",
   "main": "index.js",
   "scripts": {
