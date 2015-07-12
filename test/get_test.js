@@ -11,9 +11,9 @@ test('get a cache item', function (t) {
   var gid = uuid.v4()
 
 
-  ee.once('data', function (event) {
+  ee.once('send', function (event) {
     t.equals(event.object.id, cid)
-    ee.once('data', testGet)
+    ee.once('send', testGet)
     ee.emit('jwt', {
       to: 'jwt',
       from: gid,

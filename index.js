@@ -11,7 +11,7 @@ module.exports = function (ee) {
     if (event.verb === 'set') {
       // set key
       cache.set(event.object.id, event.object.meta)
-      ee.emit('data', {
+      ee.emit('send', {
         to: event.from,
         from: 'jwt',
         subject: 'cached',
@@ -24,7 +24,7 @@ module.exports = function (ee) {
     if (event.verb === 'get') {
       // get key
       var meta = cache.get(event.object.id)
-      ee.emit('data', {
+      ee.emit('send', {
         to: event.from,
         from: 'jwt',
         subject: 'cache',
