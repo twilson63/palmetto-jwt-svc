@@ -18,7 +18,7 @@ adapters to be used.
 set JWT token
 
 ```
-ee.emit('data', { 
+ee.emit('send', { 
   to: 'jwt', 
   from: '1234',
   subject: 'jwt',
@@ -37,7 +37,7 @@ get JWT token
 ```
 ee.once()
 
-ee.emit('data', {
+ee.emit('send', {
   to: 'jwt',
   from: '5678',
   subject: 'jwt',
